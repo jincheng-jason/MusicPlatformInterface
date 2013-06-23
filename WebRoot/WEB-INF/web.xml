@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>initializeServlet</servlet-name>
+		<servlet-class>com.ysten.dispatch.web.InitializeServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>getDataServlet</servlet-name>
+		<servlet-class>com.ysten.dispatch.web.GetDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getDataServlet</servlet-name>
+		<url-pattern>/dispatch.xml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>updateServlet</servlet-name>
+		<servlet-class>com.ysten.dispatch.web.UpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateServlet</servlet-name>
+		<url-pattern>/updateMemory</url-pattern>
+	</servlet-mapping>
+</web-app>
